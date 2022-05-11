@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Учебник Босовой 8 класс</title>
+    <link rel="stylesheet" href="main.css">
+</head> 
+<body>
+    <aside>
+        <!-- Левая панель -->
+        <img class="close_aside" src="img/close.jpg" alt="">
+        <div class="p25">
+            <p class="aside_title">Учебник изучен на</p>
+            <p class="aside_progress"><span id="number">10</span>%</p>
+            <div class="progress_line">
+                <div class="white_line"></div>
+                <div class="indikator"></div>
+                <div class="black_line"></div>
+            </div>
+            <p class="aside_title">время проведенное на сайте</p>
+            <p class="aside_timer"><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span></p>
+            <p class="aside_title">последняя глава</p>
+        </div>
+        <div class="chapter">
+            <p class="chapter_name">общие сведения о системе   счисление</p>
+            <p class="chapter_number">1.1.1</p>
+            <p class="chapter_progress"> 0%</p>
+        </div>
+        <div class="p25" >
+            <p class="aside_title">Последний раз заходил на сайт</p>
+            <p  class="aside_data" ><span id="date"></span>.<span id="month"></span>.<span id="year"></span></p>
+        </div>
+        <div class="book_chapter">
+            <div class="main_chapter">
+                <p class="main_name">Название главы</p>
+                <p class="main_number">№</p>
+                <p class="main_progress">%</p>
+            </div> 
+            <div class="chapter" onclick="changePodglava('0.0.0')">
+                <p class="chapter_name">Система счисления</p>
+                <p class="chapter_number">1.1</p>
+                <p class="chapter_progress"> 0%</p>
+            </div>
+            <!-- главы 1.2 1.3 -->
+            <!-- <div class="chapter" onclick="changePodglava('0.1.0')">
+                <p class="chapter_name">Представления чисел в компьютере</p>
+                <p class="chapter_number">1.2</p>
+                <p class="chapter_progress"> 0%</p>
+            </div>
+            <div class="chapter" onclick="changePodglava('0.2.0')">
+                <p class="chapter_name">Элементы алгберы логики</p>
+                <p class="chapter_number">1.3</p>
+                <p class="chapter_progress"> 0%</p>
+            </div> -->
+        </div>
+    </aside>
+    <main>
+        <nav>
+            <!-- Верхняя панель для навигации -->
+            <div class="row">
+                <div class="col-50 d-col">
+                    <h2 class="title_under_chapter" id="main_title"></h2>
+                    <p class="time_under_chapter">Приблизительное время обучения: <span id="">30:00</span></p>
+                    <div class="line_under_chapter"></div>
+                </div>
+                <div class="col-50 d-row">
+                    <button id="prev_button">Предыдущая глава</button>
+                    <button id="next_button">Следующая глава</button>
+                </div>
+            </div>
+            <div class="row mt-auto">
+                <div class="under_chapter under_chapter_active "onclick="changeParagraf('0')" id="G0">
+                    <p>1.1.1</p>
+                </div>
+                <div class="under_chapter" onclick="changeParagraf('1')" id="G1">
+                    <p>1.1.2</p>
+                </div>
+                <div class="under_chapter" onclick="changeParagraf('2')" id="G2">
+                    <p>1.1.3</p>
+                </div>
+                <div class="under_chapter" onclick="changeParagraf('3')" id="G3">
+                    <p>1.1.4</p>
+                </div>
+                <div class="under_chapter" onclick="changeParagraf('4')" id="G4">
+                    <p>1.1.5</p>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <div class="block_one">
+                <h1 class="block_name" id="title"></h1>
+                <img onclick="showHideBlock(event)" class="close_block" src="img/close_block.png" onclick="show_hiede(e)">
+                <div class="line"></div>
+                <div class="block_text" id="content_text"></div>
+            </div>
+            <div class="block_two"> 
+                <div class="block_obertka">
+                    <div class="vidio">
+                        <h1 class="block_name2">ВидеоУрок</h1>
+                        <div class="line_two"></div>
+                        <img onclick="showHideBlock(event)" class="close_block" src="img/close_block.png" alt="">
+                        <div class="block_text d-row">
+                            <iframe id="video" width="500" height="auto" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <div class="timelist">
+                                <h1 class="block_name2">TimeList ВидеоУрок</h1>
+                                <div class="line_two"></div>
+                                <div class="br-50">
+                                    <img  src="img/Group 18.png" alt="">
+                                    <span id="timeList1"></span>
+                                </div>
+                                <div class="br-50">
+                                    <img src="img/Group 19.png" alt="">
+                                    <span id="timeList2"></span>
+                                </div>
+                                <div class="br-50">
+                                    <img src="img/Group 20.png" alt="">
+                                    <span id="timeList3"></span>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div class="block_three">
+                <h1 class="block_name">Примеры и задачи</h1>
+                <div class="line5"></div>
+                <img onclick="showHideBlock(event)" class="close_block" src="img/close_block.png" onclick="show_hiede(e)">
+                <div class="block_text w100 d-row">
+                    <div class="block_qwest" id="blockLeft"></div>
+                    <div class="block_qwest" id="blockRight"></div>    
+                </div>
+                
+        </section>
+    </main>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/aside.js"></script>
+    <script src="scripts/changeParagraf.js"></script>
+</body>
+</html>
+
+
+

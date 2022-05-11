@@ -1,0 +1,541 @@
+/* 
+Основные цвета:
+синий - #2D13CB
+серый - #3F3F3F
+фон для блоков - #1C1C1C;
+*/
+
+@font-face {
+    font-family: Main-text;
+    src: url("fonts/Montserrat/Montserrat-Light.ttf");
+}
+body{
+    margin: 0;
+    display: flex; 
+    flex-direction: row;
+    position: relative;
+    font-family: Main-text;
+}
+
+.aside_pas aside{
+    left: -17%;
+}
+
+.aside_pas .p25, 
+.aside_pas .chapter,
+.aside_pas .book_chapter{
+    opacity: 0;
+    position: relative;
+    z-index: -1;
+}
+
+.aside_pas main{
+    width: 97%;
+    left: 3%;
+}
+
+aside{
+    width: 20%;
+    height: 100vh;
+    box-sizing: border-box;
+    background-color:#1C1C1C;
+    border:#3F3F3F solid 1px;
+    overflow-y: scroll;
+    position: absolute;
+}
+
+aside::-webkit-scrollbar {
+    width: 0;
+}
+
+main{
+    width: 80%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    overflow-y: scroll;
+    position: absolute;
+    left: 20%;
+}
+
+main::-webkit-scrollbar {
+    width: 0;
+}
+
+nav{
+    background-color:#1C1C1C;
+    height: 30%;
+    border:#3F3F3F solid 1px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    padding-bottom: 0;
+}
+
+section{
+    height: 70%; 
+}
+
+.progress_line{
+    height: 10px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.white_line,
+.black_line{
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    top: 4px;
+}
+ 
+.white_line{
+  background-image: url(img/1612937946_24-p-fon-gradient-krasno-zheltii-28.png);
+    left: 0;
+}
+
+/* !!!Значение left должно быть в диапазоне от 0 до 99% и ОБЯЗАТЕЛЬНО совпадать с left у селектора .indikator */
+.black_line{
+    background-color: black;
+    left: 10%;
+}
+.indikator{
+    left: 10%;
+}
+
+.indikator{
+    width: 2px;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+}
+
+.fon{
+    background-color: #020202;
+    height: 2px;
+    width: 100%;
+    margin-top: 4px;
+}
+
+/* aside */
+.close_aside{
+    position: absolute;
+    width: 30px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.p25{
+    padding: 25px;
+}
+
+.aside_title{
+    font-size: 24px;
+    color: gainsboro;
+}
+
+.aside_progress,
+.number,
+.aside_timer,
+.aside_data{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: white;
+}
+
+#number,
+.aside_timer{
+    font-size: 60px;
+}
+
+.aside_data{
+    font-size: 40px;
+    margin: 15px 0;
+}
+
+aside p{
+    margin: 0;
+}
+
+.main_chapter,
+.chapter{
+    border: solid #3F3F3F 1px;
+    color: white ;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.chapter{
+    transition: .3s;
+    cursor: pointer;
+    background-color:#1C1C1C;
+}
+
+.block_text_hide{
+    height: 0px;
+    overflow: hidden;
+}
+
+.chapter:hover{
+    transform: scale(1.05) !important;
+}
+
+.chapter_number,
+.chapter_progress{
+    margin-top: 10px;
+    margin-left: 60px;
+    font-size: 24px;
+    margin: 10px;
+}
+
+.chapter_number{
+    margin-left: auto;
+}
+
+.chapter_name{
+    margin: 10px;
+}
+
+.main_chapter{
+    background-color: rgb(43, 43,43);
+}
+
+.main_name{
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+.main_number{
+    margin-top: 10px;
+    margin-left: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+}
+
+.main_progress{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+}
+
+.block_one, 
+.block_two,
+.block_three{
+    position: relative;
+    background-color: rgb(28, 28,28);
+    padding: 30px;
+    display: flex;
+    flex-direction: column !important;
+    box-sizing: border-box;
+    margin: 20px ;
+}
+.block_two{
+    background-color: black;
+    padding: 0%;
+}
+
+.rotate_arrow{
+    transform: rotateZ(180deg);
+}
+
+.block_name {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:400;
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.line{
+    width: 500px;
+    height: 2px;
+    background-color: white;
+}
+
+.block_text{
+    margin: 0;
+    color: gray;
+    font-size: 18px;
+}
+
+.white{
+    color: white;
+}
+
+.text, .main_text{
+    color: whitesmoke;
+    font-size: 24px;
+}
+
+.line_two{
+    width: 230px;
+    height: 2px;
+    background-color: white;
+}
+
+.block_name2{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:400;
+    font-size: 45px;
+    margin: 5px 0;
+}
+
+iframe{
+    margin-top: 40px;
+}
+
+.close_block{
+    width: 50px;
+    position: absolute;
+    top: 45px;
+    right: 60px;
+    cursor: pointer;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.col-50{
+    width: 50%;
+}
+
+.d-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.d-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.mt-auto{
+    margin-top: auto !important;
+}
+
+.under_chapter{
+    border-bottom: 2px solid gray;
+    margin: 0 5px;
+    font-size: 26px;
+    padding: 0 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+    font-weight: 600 ;
+    display: flex;
+    transition: 0.3s ease-out all;
+    position: relative;
+    z-index: 90;
+}
+
+.under_chapter p {
+    position: relative;
+    z-index: -1;
+}
+
+.under_chapter_active{
+    border-bottom: 2px solid white;
+    color: white;
+}
+
+.under_chapter p{
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+.title_under_chapter{
+    font-size: 36px;
+    color: white;
+    font-family:Main-text, sans-serif;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.time_under_chapter{
+    font-size: 24px;
+    color: gainsboro;
+    font-family: Main-text, sans-serif;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#time_leson{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+}
+
+.line_under_chapter{
+    width: 75%;
+    height: 2px;
+    background-color: white;
+}
+
+#prev_button, 
+#prev, 
+#next,
+#next_button{
+    margin: 0 10px;
+    margin-bottom: auto;
+    padding: 15px 30px;
+    margin-top: 10px;
+    font-size: 24px;
+    transition: .3s;
+}
+
+#next_button, 
+#next{
+    background-color: transparent;
+    border: 2px solid #3F3F3F;
+    color: gray;
+}
+
+#prev_button,
+#prev{
+    color: gainsboro;
+    background-color: blue;
+    border: blue;
+    margin-left: 100px;
+}
+
+.line5, 
+.line55{
+    width: 500px;
+    height: 3px;
+    background-color: white;
+}
+
+#quastion{
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border: 2px solid rgb(63,63,63);
+    background-color: rgb(28, 28, 28);
+    font-size: 18px;
+    color: gray;
+}
+
+.text_333{
+    width: 50%;
+}
+
+.answer{
+    display: flex;
+    flex-direction: row;
+    color: gray;
+}
+.block_three .block_text{
+    width: 50%;
+}
+
+.block_three{
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+}
+.exrcise{
+    width: 50% ;
+}
+.under_chapter p{
+    margin-top: auto;
+}
+
+.under_chapter:hover{
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.main_text{
+    margin: 10px 0;
+}
+
+li{
+    margin: 10px 0;
+}
+.block_text #prev{
+    margin: 50px 0;
+}
+#next_button:hover{
+    transform: scale(1.1) !important;
+}
+
+#prev_button:hover{
+    transform: scale(1.1) !important;
+}
+#prev:hover{
+    transform: scale(1.1) !important;
+}
+#next:hover{
+    transform: scale(1.1) !important;
+}
+
+.block_obertka{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.vidio{
+    background-color: rgb(28, 28, 28);
+    padding: 30px;
+    width: 100%;
+    position: relative;
+}
+
+.timelist .block_name2{
+    font-size: 35px;
+}
+.timelist .line_two{
+    width: 320px;
+}
+
+.timelist{
+    width: 40%;
+    background-color: rgb(28, 28, 28);
+    margin-left: 20px;
+    padding: 30px;
+}
+.vidio .close_block{
+    right: 60px;
+    top: 45px;
+}
+
+iframe{
+    width: 60%;
+}
+.br-50{
+    margin: 25px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.br-50 span{
+    margin: auto 0;
+    margin-left: 15px;
+}
+
+.block_qwest{
+    width: 50%;
+}
+
+.w100{
+    width: 100% !important;
+}
+
+
+
+
